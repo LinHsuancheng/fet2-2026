@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>recruitment_for_speakers_秀米设计稿 · 公众号排版预览</title>
+<style>
+  body{margin:0;background:#eef0f2;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;-webkit-text-size-adjust:100%;}
+  .gzh-toolbar{position:fixed;top:0;left:0;right:0;height:54px;background:#ffffff;box-shadow:0 1px 10px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 16px;z-index:99;}
+  .gzh-hint{font-size:13px;color:#6b7280;line-height:1.4;}
+  .gzh-hint b{color:#111827;}
+  .gzh-copy{background:#059669;color:#fff;border:0;border-radius:9px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,.28);white-space:nowrap;transition:transform .08s,background .15s;}
+  .gzh-copy:hover{background:#047857;}
+  .gzh-copy:active{transform:translateY(1px);}
+  .gzh-toast{position:fixed;top:66px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:88vw;text-align:center;}
+  .gzh-toast.show{opacity:1;}
+  .gzh-stage{max-width:700px;margin:78px auto 64px;padding:0 8px;}
+  @media(max-width:520px){.gzh-hint{max-width:150px;}}
+</style>
+</head>
+<body>
+<div class="gzh-toolbar">
+  <span class="gzh-hint">👇 下方是排版效果 · 点右侧 <b>复制</b> 直接粘到公众号</span>
+  <button class="gzh-copy" id="gzhCopyBtn" onclick="gzhCopy()">📋 复制到公众号</button>
+</div>
+<div class="gzh-toast" id="gzhToast"></div>
+<div class="gzh-stage">
+  <div id="gzh-content">
+<section style="max-width:677px;margin:0 auto;background:#FFF9F7;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#513941;line-height:1.8;overflow:hidden;">
+<section style="background:#EED3D5;padding:27px 24px 28px;overflow:hidden;border-bottom:4px solid #B77680;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 146" width="100%" style="display:block;height:auto;margin:8px 0 18px;" aria-hidden="true">
+<path d="M0 113 H150 L201 57 H399 L450 113 H600" fill="none" stroke="#C78E97" stroke-width="2"/>
+<path d="M0 132 H170 L217 80 H383 L430 132 H600" fill="none" stroke="#D9ADB3" stroke-width="1.5"/>
+<rect x="240" y="21" width="120" height="104" rx="11" fill="#F8EBE9" stroke="#A76570" stroke-width="2"/>
+<path d="M255 51 H345 M255 68 H345 M255 85 H345 M255 102 H345" stroke="#D4A0A8" stroke-width="2"/>
+<path d="M300 18 V126" stroke="#9C5965" stroke-width="5" stroke-linecap="round"/>
+<circle cx="300" cy="73" r="10" fill="#B76F7B"><animate attributeName="opacity" values=".3;1;.3" dur="2.8s" repeatCount="indefinite"/></circle>
+<circle r="5" fill="#9C5965"><animateMotion dur="5s" repeatCount="indefinite" path="M0 113 H150 L201 57 H399 L450 113 H600"/></circle>
+<path d="M0 143 H600" fill="none" stroke="#C78E97" stroke-width="1" stroke-dasharray="5 12"><animate attributeName="stroke-dashoffset" from="0" to="-68" dur="4s" repeatCount="indefinite"/></path>
+</svg><h3 style="color:#633D48;font-size:29px;font-weight:900;line-height:1.42;letter-spacing:.5px;margin:0;"><span leaf="">讲者招募｜FET² 2026：把你的研究，带到下一场对话</span></h3></section><section style="padding:27px 22px 42px;">
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">在数字浪潮席卷全球的当下，电子信息领域正以惊人的速度迭代创新——从人工智能芯片的突破到量子通信的落地，从物联网技术的普及到 6G 研发的加速，每一个前沿方向都承载着推动产业升级与科技进步的重要使命。为搭建学术交流与思想碰撞的高端平台，Frontier Electronics Technology Talk(FET²)即将于11月拉开帷幕，现正式启动讲者报名通道，诚邀在电子信息方向取得优秀成果的本科生或研究生同学们加入，用深度分享点亮学术盛宴！</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<section style="background:#F5E5E5;border-left:4px solid #B77680;padding:18px;margin:1px 0 29px;"><p style="margin:0;color:#633D48;font-size:16px;font-weight:700;line-height:1.85;"><span leaf="">每一项科研突破，都始于一个值得追问的细节；每一项技术进展，都始于一场学术对话的交流。这个十一月，给你的研究做一次“开环测试”。</span></p></section>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">在实验室里，大多数突破都发生得很安静：也许是一条终于收敛的仿真曲线，一次把本底噪声压下去的电路调优，或者是清洗数据时意外浮现的规律。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">这些进展在组会里是日常，但关起门来推演久了，思维难免会陷入局部最优。很多时候，一个困扰很久的难点，在另一个细分方向的同行眼里，恰好有一套现成的解法。把问题抛出去，往往比闭门造车更能提高研究的“信噪比”。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><strong style="color:#713C49;font-weight:800;"><span leaf="">Frontier Electronics Technology Talk（FET²）2026 现正式启动讲者招募</span></strong><span leaf="">，我们诚邀在电子信息方向取得优秀成果的本科生或研究生同学们加入，请带上你手头的工作，来和不同背景的同行“碰一碰”。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<section style="margin:24px 0 23px;padding:16px 0 0;border-top:1px solid #E8D5D5;"><h3 style="margin:0;padding-left:13px;border-left:4px solid #B77680;color:#713C49;font-size:24px;line-height:1.4;font-weight:850;"><span leaf="">关于 FET²</span></h3></section>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">FET² 由北京大学电子信息科学类实验班（信班）主办。FET 取自 Field Effect Transistor（场效应晶体管）——在电路里，它用微小的栅极偏置调制沟道电流；而在论坛里，我们希望它成为一个低阈值的连接节点，让一次微小的提问，也能在跨方向的碰撞中获得意想不到的“增益”。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">电子信息领域的光谱很宽：有人向下深潜，在材料、器件与工艺的物理极限处试探；有人向上构建，在芯片架构、光电系统、量子通信与 6G 网络中寻找最优解。平时大家各自在不同的抽象层里耕耘，FET² 则提供周末一天的带宽，让底层器件和上层系统之间实现一次面对面的交流。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><strong style="color:#713C49;font-weight:800;"><span leaf="">我们欢迎打磨成型的硬核进展，同样欢迎尚在“演进中”的工作</span></strong><span leaf="">：</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<section style="background:#FFFFFF;border:1px solid #E9D6D7;border-left:4px solid #C2868E;padding:16px 18px;margin:0 0 18px;box-shadow:0 4px 14px rgba(105,58,67,.05);"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">如果你已有完整的阶段性成果，欢迎来作系统性的分享，进行跨领域视角的对话；</span></p></section>
+<section style="background:#FFFFFF;border:1px solid #E9D6D7;border-left:4px solid #C2868E;padding:16px 18px;margin:0 0 18px;box-shadow:0 4px 14px rgba(105,58,67,.05);"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">如果你的课题仍在演进期——比如刚刚攻克了一个关键的工程卡点、验证了一个有潜力的技术切入点，且已有扎实的阶段性数据或推演支撑——只要问题本身经得起推敲，就不必等到整篇论文完全成型再开口。</span></p></section>
+<section style="margin:24px 0 23px;padding:16px 0 0;border-top:1px solid #E8D5D5;"><h3 style="margin:0;padding-left:13px;border-left:4px solid #B77680;color:#713C49;font-size:24px;line-height:1.4;font-weight:850;"><span leaf="">活动形式</span></h3></section>
+<section style="background:#F9EEEE;border-left:4px solid #B77680;padding:17px 18px;margin:0 0 24px;"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">本次论坛将于 </span><strong style="color:#713C49;font-weight:800;"><span leaf="">2026 年 11 月 28 日（星期六）9:30 - 18:00</span></strong><span leaf=""> 线下举行。除特邀教师主旨报告（Keynotes）和茶歇交流外，学生讲者可选择以下两种形式（可单选，也可同时报名）：</span></p></section>
+<section style="background:#F9EEEE;border-left:4px solid #B77680;padding:17px 18px;margin:0 0 24px;"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><strong style="color:#713C49;font-weight:800;"><span leaf="">Orals（口头报告）｜高密度输出</span></strong><span leaf=""> 用十五分钟的时间，清晰讲透你的核心问题、技术路径与阶段性发现。直面现场师生的提问，在跨方向的交锋中检验逻辑的成色。</span></p></section>
+<section style="background:#F9EEEE;border-left:4px solid #B77680;padding:17px 18px;margin:0 0 24px;"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><strong style="color:#713C49;font-weight:800;"><span leaf="">Posters（海报展示）｜点对点深聊</span></strong><span leaf=""> 在展区通过一张海报呈现研究脉络。没有讲台的距离感和时间限制，适合与享受茶歇的同学们指着具体的架构图或实验曲线展开推演。</span></p></section>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">注：报名结束后，组委会将与每位讲者联系，沟通具体的时间与展示安排。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<section style="margin:24px 0 23px;padding:16px 0 0;border-top:1px solid #E8D5D5;"><h3 style="margin:0;padding-left:13px;border-left:4px solid #B77680;color:#713C49;font-size:24px;line-height:1.4;font-weight:850;"><span leaf="">奖项设置</span></h3></section>
+<section style="background:#F9EEEE;border-left:4px solid #B77680;padding:17px 18px;margin:0 0 24px;"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">论坛设有 </span><strong style="color:#713C49;font-weight:800;"><span leaf="">Best Paper（最佳口头报告）</span></strong><span leaf=""> 与 </span><strong style="color:#713C49;font-weight:800;"><span leaf="">Best Poster（最佳海报展示）</span></strong><span leaf=""> 等奖项，以鼓励有价值的研究探索与干净利落的学术表达。具体评选机制与奖品将在后续通知中公布。</span></p></section>
+<section style="margin:24px 0 23px;padding:16px 0 0;border-top:1px solid #E8D5D5;"><h3 style="margin:0;padding-left:13px;border-left:4px solid #B77680;color:#713C49;font-size:24px;line-height:1.4;font-weight:850;"><span leaf="">报名方式</span></h3></section>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">招募对象：</span><strong style="color:#713C49;font-weight:800;"><span leaf="">北京大学信息科学技术学院本科生、北京大学电子学院研究生、北京大学集成电路学院研究生</span></strong><span leaf="">。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">请扫描下方二维码填写报名问卷，并选择 Orals、Posters 或两者兼报。</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<section style="background:#F9EEEE;border-left:4px solid #B77680;padding:17px 18px;margin:0 0 24px;"><p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">报名截止时间：</span><strong style="color:#713C49;font-weight:800;"><span leaf="">2026 年 11 月 8 日（星期日）23:59</span></strong><span leaf=""> (fake)</span></p></section>
+<section style="background:#FFFDFB;border:1.5px dashed #C99CA3;padding:33px 12px;text-align:center;margin:16px 0 20px;"><p style="font-size:14px;color:#8D626A;line-height:1.8;margin:0;"><span leaf="">【报名问卷二维码示意，使用前替换】</span></p></section>
+<section style="border-top:1px solid #DCC6C8;margin:34px 0 21px;"><span leaf=""><br></span></section>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">活动主办：北京大学电子信息科学类实验班（信班）</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">活动指导：北京大学信班管理委员会</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">活动协办：北京大学信息科学技术学院团委</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">FET² 2026 组委会： (fake) General Chair：赵子安</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">Publicity Co-Chairs：孙楚涵、陆远航</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">Program &amp; Publication Co-Chairs：周子墨、陈若愚</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">Organization Co-Chairs：林沐阳、沈奕辰</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+<p style="margin:0;color:#59434A;font-size:15px;line-height:1.9;text-align:justify;"><span leaf="">文案：孙楚涵、陆远航、赵子安</span></p><p style="margin:0;font-size:15px;line-height:1.9;"><span leaf=""><br></span></p>
+</section>
+</section>
+  </div>
+</div>
+<script>
+  function gzhShowToast(msg){
+    var t=document.getElementById('gzhToast');
+    t.textContent=msg;t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer=setTimeout(function(){t.classList.remove('show');},2800);
+  }
+  function gzhCopy(){
+    var el=document.getElementById('gzh-content');
+    var html=el.innerHTML;
+    var text=el.innerText;
+    var btn=document.getElementById('gzhCopyBtn');
+    var ok=false;
+    var handler=null;
+    var ta=document.createElement('textarea');
+    try{
+      // Write the original HTML directly to avoid browser range serialization
+      // injecting values such as text-align:start into the copied markup.
+      handler=function(e){
+        if(!e.clipboardData)return;
+        e.clipboardData.setData('text/html',html);
+        e.clipboardData.setData('text/plain',text);
+        e.preventDefault();
+      };
+      document.addEventListener('copy',handler,{once:true});
+      ta.value=text;
+      ta.setAttribute('readonly','');
+      ta.style.position='fixed';
+      ta.style.left='-9999px';
+      ta.style.top='0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      ok=document.execCommand('copy');
+    }catch(e){
+      ok=false;
+    }finally{
+      if(ta.parentNode)ta.parentNode.removeChild(ta);
+      if(handler)document.removeEventListener('copy',handler);
+    }
+    if(ok){
+      gzhShowToast('✅ 已复制！去公众号编辑器按 Ctrl/⌘+V 粘贴即可');
+      var old=btn.textContent;btn.textContent='✅ 已复制';
+      setTimeout(function(){btn.textContent=old;},2200);
+    }else{
+      gzhShowToast('⚠ 浏览器阻止复制，请换 Edge/Chrome 后重试');
+    }
+  }
+</script>
+</body>
+</html>
