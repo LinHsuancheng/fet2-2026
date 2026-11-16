@@ -7,6 +7,8 @@ import re
 
 SOURCE = Path("recruitment_for_speakers.md")
 OUTPUT = Path("recruitment_for_speakers_秀米设计稿.html")
+QR_ASSET = Path("assets/registration-qr.png")
+QR_URL = "https://img.xiumi.us/xmi/ua/5bkMf/i/ee7417ed6d6b8a86564c172b2da9b253-sz_13157.png"
 
 
 def leaf(text):
@@ -58,8 +60,8 @@ def parse(markdown):
             blocks.append(("item", line[2:]))
         elif line in ("_" * 40, "---"):
             blocks.append(("rule", ""))
-        elif line.startswith("【报名问卷二维码示意"):
-            blocks.append(("qr", line))
+        elif line.startswith("![](") and line.endswith(")"):
+            blocks.append(("image", line[4:-1]))
         else:
             blocks.append(("paragraph", line))
     return blocks
@@ -91,11 +93,15 @@ def render(blocks):
                 '<section style="background:#FFFFFF;border:1px solid #E9D6D7;border-left:4px solid #C2868E;padding:16px 18px;margin:0 0 18px;box-shadow:0 4px 14px rgba(105,58,67,.05);">'
                 + paragraph(value, blank=False) + '</section>'
             )
-        elif kind == "qr":
+        elif kind == "image":
+            if value != QR_ASSET.as_posix() or not QR_ASSET.is_file():
+                raise ValueError(f"Missing or unexpected image: {value}")
             out.append(
-                '<section style="background:#FFFDFB;border:1.5px dashed #C99CA3;padding:33px 12px;text-align:center;margin:16px 0 20px;">'
-                '<p style="font-size:14px;color:#8D626A;line-height:1.8;margin:0;">'
-                + leaf(value) + '</p></section>'
+                '<section style="background:#FFFFFF;border:1px solid #E9D6D7;'
+                'padding:20px 12px;text-align:center;margin:16px 0 26px;">'
+                '<span leaf=""><img src="' + QR_URL + '" style="width:190px;max-width:100%;'
+                'height:auto;display:block;margin:0 auto;image-rendering:pixelated;"></span>'
+                '</section>'
             )
         elif kind == "rule":
             out.append('<section style="border-top:1px solid #DCC6C8;margin:34px 0 21px;"><span leaf=""><br></span></section>')
@@ -134,7 +140,7 @@ def main():
     html = render(blocks)
     text = LeafText()
     text.feed(html)
-    expected = "".join(value.replace("**", "") for kind, value in blocks if kind != "rule")
+    expected = "".join(value.replace("**", "") for kind, value in blocks if kind not in ("rule", "image"))
     if "".join(text.parts) != expected:
         raise ValueError("Rendered text differs from the approved Markdown")
     OUTPUT.write_text(html, encoding="utf-8")
