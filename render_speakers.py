@@ -7,6 +7,7 @@ import re
 
 SOURCE = Path("recruitment_for_speakers.md")
 OUTPUT = Path("recruitment_for_speakers_秀米设计稿.html")
+LOGO_ASSET = Path("assets/xinban-logo.png")
 QR_ASSET = Path("assets/registration-qr.png")
 QR_URL = "https://img.xiumi.us/xmi/ua/5bkMf/i/ee7417ed6d6b8a86564c172b2da9b253-sz_13157.png"
 
@@ -69,10 +70,13 @@ def parse(markdown):
 
 def render(blocks):
     out = ['<section style="max-width:677px;margin:0 auto;background:#FFF9F7;font-family:-apple-system,BlinkMacSystemFont,\'PingFang SC\',\'Microsoft YaHei\',sans-serif;color:#513941;line-height:1.8;overflow:hidden;">']
+    if not LOGO_ASSET.is_file():
+        raise FileNotFoundError(LOGO_ASSET)
     for kind, value in blocks:
         if kind == "title":
             out.append(
                 '<section style="background:#EED3D5;padding:27px 24px 28px;overflow:hidden;border-bottom:4px solid #B77680;">'
+                + '<img src="assets/xinban-logo.png" alt="北京大学电子信息科学类实验班与 FET² 标志" style="display:block;width:236px;max-width:100%;height:auto;margin:0 0 18px;">'
                 + ART + '<h3 style="color:#633D48;font-size:29px;font-weight:900;line-height:1.42;letter-spacing:.5px;margin:0;">'
                 + leaf(value) + '</h3></section><section style="padding:27px 22px 42px;">'
             )
